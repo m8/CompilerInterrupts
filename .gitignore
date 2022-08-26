@@ -1,3 +1,10 @@
+example/*.ll
+example/orig_demo
+example/ci_demo
+example/ci_mult_files
+example/ci_modularity_demo
+example/ci_profiler
+
 # Prerequisites
 *.d
 

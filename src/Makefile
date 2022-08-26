@@ -66,6 +66,7 @@ all: $(LIB_DIR)/$(CI_PASS) $(LIB_DIR)/$(CI_LIB_DYN) $(LIB_DIR)/$(CI_LIB_STATIC)
 	$(QUIET)$(CXX) $(LLVM_VRSN_FLAG) -c $(CPPFLAGS) $(CXXFLAGS) $<
 
 $(LIB_DIR)/$(CI_PASS): $(CI_PASS_OBJECT)
+	@mkdir -p $(LIB_DIR)
 	$(info Creating Compiler Interrupt Pass library $@)
 	$(QUIET)$(CXX) -o $@ $(LOADABLE_MODULE_OPTIONS) $(CXXFLAGS) $(LDFLAGS) $^
 
